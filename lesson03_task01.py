@@ -1,3 +1,4 @@
+# github link - https://github.com/KozhevnikovSpb/synergy_python.git
 print("Введите вид животного: ", end='')
 type_animal = input()
 print("Укажите возраст животного: ", end='')

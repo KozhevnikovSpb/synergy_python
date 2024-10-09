@@ -14,6 +14,17 @@ if palindrome:
 else:
     print(f'no')
 
+# Второй способ реализации алгоритма на поиск палиндрома
+i = 0
+while i < len(str01) // 2:
+    if str01[i] != str01[len(str01) - 1 - i]:
+        print(f'no')
+        break    
+    else:
+        i += 1
+else:
+    print(f'yes')
+
 
 
 

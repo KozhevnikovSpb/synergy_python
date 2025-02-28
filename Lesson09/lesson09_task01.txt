@@ -1,0 +1,5 @@
+# github link - https://github.com/KozhevnikovSpb/synergy_python.git
+
+N = int(input("Введите количество чисел: "))
+setN = {int(n) for n in input("Введите " + str(N) + " значений через пробел: ").split()}
+print(f"Количество разных чисел равно {len(setN)}")   # Выводим размер, полученного множества или количество разных чисел

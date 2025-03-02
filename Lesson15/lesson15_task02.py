@@ -1,0 +1,34 @@
+# github link - https://github.com/KozhevnikovSpb/synergy_python.git
+
+class Transport(object):
+    """ Родительский класс транспорт."""
+    def __init__(self, name, max_speed, mileage):
+        """ Конструктор родительского класса."""
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+
+    def print_Transport(self):
+        """ Вывод информации по объекту."""
+        print(f"Название автомобиля: {self.name}. Скорость: {self.max_speed}. Пробег: {self.mileage}")
+
+class Autobus(Transport):
+    """ Наследуемый класс автобус."""
+    def __init__(self, name, max_speed, mileage, seating_capacity=50):
+        """ Конструктор класса автобус, с вызовом конструктора класс транспорт."""
+        super().__init__(name, max_speed, mileage)                      # Вызов обращение к методу родительского класса. Т.к. класс один, нет необходимости в явном указании
+        self.seating_capacity = seating_capacity
+
+    def print_seatingCapacity(self):
+        """ Вывод на печать количества мест в классе автобус."""
+        print(f"Вместимость одного автобуса {self.name}  {self.seating_capacity} пассажиров.")
+    
+
+def main():
+    my_car = Autobus("Renault Logan", 180, 12)
+    my_car.print_Transport()
+    my_car.print_seatingCapacity()
+    
+
+if __name__ == "__main__":
+    main()

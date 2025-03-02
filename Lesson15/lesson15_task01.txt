@@ -1,0 +1,16 @@
+# github link - https://github.com/KozhevnikovSpb/synergy_python.git
+
+class Transport(object):
+    def __init__(self, name, max_speed, mileage):
+        self.name = name
+        self.max_speed = max_speed
+        self.mileage = mileage
+    
+
+def main():
+    Autobus = Transport("Renault Logan", 180, 12)
+    print(f"Название автомобиля: {Autobus.name}. Скорость: {Autobus.max_speed}. Пробег: {Autobus.mileage}")
+
+
+if __name__ == "__main__":
+    main()
